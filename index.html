@@ -1,162 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharmesh Kanzariya | Software Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-    header p {
-      margin-top: 10px;
-      color: #38bdf8;
-      font-size: 1.2rem;
-    }
-    nav {
-      margin-top: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #94a3b8;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover { color: #38bdf8; }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-    .skills span {
-      display: inline-block;
-      background: #334155;
-      padding: 8px 12px;
-      border-radius: 20px;
-      margin: 5px;
-      font-size: 0.9rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krutarth Associates</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#ff6600,#ff0033);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    position:relative;
+}
+.hero h1{font-size:42px}
+
+/* LANGUAGE */
+.lang{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.lang button{
+    padding:5px 10px;
+    border:none;
+    margin:2px;
+    border-radius:5px;
+}
+
+/* BUTTONS */
+.top-btns a{
+    background:white;
+    color:#ff3300;
+    padding:10px 15px;
+    margin:5px;
+    border-radius:25px;
+    text-decoration:none;
+    display:inline-block;
+    font-weight:bold;
+}
+
+/* SLIDER */
+.slider{height:300px;overflow:hidden}
+.slides{display:flex;width:400%;animation:slide 16s infinite}
+.slides img{width:100%;height:300px;object-fit:cover}
+@keyframes slide{
+0%{margin-left:0}
+25%{margin-left:-100%}
+50%{margin-left:-200%}
+75%{margin-left:-300%}
+}
+
+/* SECTION */
+.section{padding:40px 20px}
+.card{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:15px;
+    margin:20px auto;
+    max-width:900px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.card:hover{transform:scale(1.03)}
+
+h2{color:#2d2f8f;margin-bottom:10px}
+
+/* ULTRA BRAND SECTION */
+.brand-section{text-align:center}
+.brand-slider{overflow:hidden;margin-top:20px}
+.brand-track{
+    display:flex;
+    gap:15px;
+    animation:scroll 20s linear infinite;
+}
+.brand-track span{
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px);
+    padding:12px 20px;
+    border-radius:25px;
+    white-space:nowrap;
+    transition:0.3s;
+}
+.brand-track span:hover{
+    background:linear-gradient(135deg,#ff6600,#ff0033);
+    color:white;
+    transform:scale(1.1);
+}
+@keyframes scroll{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+
+/* FORM */
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+button{
+    background:#ff3300;
+    color:white;
+    padding:12px;
+    border:none;
+    width:100%;
+    border-radius:8px;
+}
+
+/* MAP */
+iframe{
+    width:100%;
+    height:300px;
+    border-radius:10px;
+}
+
+/* FLOAT BUTTONS */
+.float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+}
+.float a{
+    display:block;
+    margin:10px 0;
+    padding:12px;
+    border-radius:50%;
+    color:white;
+    text-align:center;
+}
+.whatsapp{background:#25D366}
+.call{background:#007bff}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Dharmesh Kanzariya</h1>
-  <p>Software Developer | Angular | .NET</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!-- HERO -->
+<div class="hero">
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('gu')">GU</button>
+</div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      Results-driven Software Developer with strong experience in building enterprise web applications using Angular and .NET technologies. Skilled in designing scalable architectures, API integrations, and database-driven solutions.
-    </p>
-  </div>
-</section>
+<h1 id="title">KRUTARTH ASSOCIATES</h1>
+<p id="subtitle">Loan • Insurance • Finance Services</p>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card skills">
-    <span>Angular</span>
-    <span>TypeScript</span>
-    <span>.NET Core</span>
-    <span>SQL Server</span>
-    <span>JavaScript</span>
-    <span>REST APIs</span>
-    <span>HTML & CSS</span>
-  </div>
-</section>
+<div class="top-btns">
+<a href="tel:9106991314">📞 Call Now</a>
+<a href="https://maps.google.com/?q=halvad" target="_blank">📍 Direction</a>
+</div>
+</div>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="card">
-    <p>
-      Developed and maintained enterprise-level applications using Angular, TypeScript, .NET Core, and SQL Server. Built dynamic dashboards, reusable components, and optimized API data flow.
-    </p>
-  </div>
-</section>
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="poster1.jpg">
+<img src="poster2.jpg">
+<img src="poster3.jpg">
+<img src="poster4.jpg">
+</div>
+</div>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Enterprise Dashboard</h3>
-      <p>Built a data-driven dashboard with Angular and .NET APIs for real-time analytics.</p>
-    </div>
-    <div class="card">
-      <h3>Reporting System</h3>
-      <p>Developed dynamic reporting modules with optimized SQL queries and UI components.</p>
-    </div>
-  </div>
-</section>
+<!-- SERVICES -->
+<div class="section">
+<div class="card">
+<h2>📄 Loan & Insurance</h2>
+<p>All bank loans, car insurance, bike insurance, commercial vehicle insurance, new & old vehicle finance available.</p>
+</div>
+</div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: your@email.com</p>
-    <p>GitHub: github.com/Dharmesh2208</p>
-    <a href="#" class="btn">Download Resume</a>
-  </div>
-</section>
+<!-- ULTRA BRANDS -->
+<div class="section">
+<div class="card brand-section">
+<h2>🚗 Brands We Deal With</h2>
 
-<footer>
-  <p>© 2026 Dharmesh Kanzariya</p>
-</footer>
+<div class="brand-slider">
+<div class="brand-track">
+<span>🚗 Maruti Suzuki</span>
+<span>🚙 Hyundai</span>
+<span>🚘 Tata Motors</span>
+<span>🚗 Honda</span>
+<span>🚙 Mahindra</span>
+<span>🚘 Nissan</span>
+
+<span>🚗 Maruti Suzuki</span>
+<span>🚙 Hyundai</span>
+<span>🚘 Tata Motors</span>
+<span>🚗 Honda</span>
+<span>🚙 Mahindra</span>
+<span>🚘 Nissan</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- FORM -->
+<div class="section">
+<div class="card">
+<h2>📩 Loan Enquiry</h2>
+
+<input id="name" placeholder="Your Name">
+<input id="phone" placeholder="Mobile Number">
+<textarea id="msg" placeholder="Your Requirement"></textarea>
+
+<button onclick="sendWhatsApp()">Send on WhatsApp</button>
+</div>
+</div>
+
+<!-- MAP -->
+<div class="section">
+<div class="card">
+<h2>📍 Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=halvad&t=&z=13&output=embed"></iframe>
+</div>
+</div>
+
+<!-- FLOAT BUTTONS -->
+<div class="float">
+<a class="whatsapp" href="https://wa.me/919106991314">💬</a>
+<a class="call" href="tel:9106991314">📞</a>
+</div>
+
+<!-- JS -->
+<script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
+
+let url="https://wa.me/9510053057?text="
++"Name: "+name+"%0aPhone: "+phone+"%0aMsg: "+msg;
+
+window.open(url,'_blank');
+}
+
+function setLang(lang){
+if(lang==='gu'){
+document.getElementById("title").innerText="કૃતાર્થ એસોસિએટ્સ";
+document.getElementById("subtitle").innerText="લોન • વીમા • ફાઇનાન્સ સેવા";
+}else{
+document.getElementById("title").innerText="KRUTARTH ASSOCIATES";
+document.getElementById("subtitle").innerText="Loan • Insurance • Finance Services";
+}
+}
+</script>
 
 </body>
 </html>
